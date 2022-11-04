@@ -31,7 +31,7 @@
     --fs-small1: 0.9rem;
     --fs-medium0: 1rem;
     --fs-medium1: 1.1rem;
-    --fs-large0: 1.2rem;
+    --fs-large0: 2rem;
     --fs-large1: 2.5rem;
 
     /* Font Weights */
@@ -51,7 +51,7 @@ body{
 }
 
 main{
-    width: 90%;
+    width: 80%;
     max-width: 950px;
     height: auto;
     min-height: 550px;
@@ -64,6 +64,8 @@ main{
     border-radius: 30px;
     position: relative;
     box-shadow: 3px 20px 14px -6px var(--sombra);
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 .section-frame{
@@ -77,9 +79,11 @@ main{
 }
 
 .background-svg-pattern{
-    width: 1000px;
-    height: 1000px;
-    background-image: url(./images/bg-pattern-desktop.svg);
+    width: 216%;
+    height: 183%;
+    /* width: 1000px;
+    height: 1000px; */
+    background-image: url("./images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -89,9 +93,11 @@ main{
 }
 
 .ilustration-woman{
-    width: 525px;
-    height: 416px;
-    background-image: url(./images/illustration-woman-online-desktop.svg);
+    width: 114%;
+    height: 76%;
+    /* width: 525px;
+    height: 416px; */
+    background-image: url("./images/illustration-woman-online-desktop.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -101,9 +107,11 @@ main{
 }
 
 .box{
-    height: 160px;
-    width: 160px;
-    background-image: url(./images/illustration-box-desktop.svg);
+    height: 27%;
+    width: 17%;
+    /* height: 160px;
+    width: 160px; */
+    background-image: url("./images/illustration-box-desktop.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -235,3 +243,89 @@ footer{
 
 /* Media Queries */
 
+@media (max-width: 1100px){
+    .background-svg-pattern {
+        width: 244%;
+        height: 189%;
+        left: -150%;
+        top: -57%;
+    }
+}
+
+@media (max-width: 880px){
+
+    .background-svg-pattern {
+        width: 244%;
+        height: 197%;
+        left: -150%;
+        top: -57%;
+    }
+}
+
+@media (max-width: 768px){
+    main{
+        grid-template-columns: 1fr;
+        width: 85%;
+        min-height: auto;
+    }
+
+    #right-section{
+        padding: 50px 10% 25px 10%;
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: start;
+        justify-items: start;
+        gap: 20px;
+        grid-template-rows: 30px 1fr;
+    }
+    
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: var(--fs-large0);
+    }
+
+    #left-section{
+        height: 10px;
+        overflow: visible;
+        width: 1px;
+        justify-self: center;
+    }
+
+    .background-svg-pattern{
+        width: 200px;
+        height: 200px;
+        /* width: 1000px;
+        height: 1000px; */
+        background-image: url("./images/bg-pattern-mobile.svg");
+        top: -64px;
+        left: -100px;
+    }
+    
+    .ilustration-woman{
+        width: 200px;
+        height: 200px;
+        /* width: 525px;
+        height: 416px; */
+        background-image: url("./images/illustration-woman-online-mobile.svg");
+        top: -115px;
+        left: -100px;
+    }
+
+    #q-container{
+        margin-bottom: 20px;
+    }
+    
+    .box{
+        display: none;
+    }
+
+    .question{
+        font-size: var(--fs-small0);
+    }
+
+    .answer{
+        font-size: var(--fs-small0);
+    }
+
+}
